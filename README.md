@@ -1,61 +1,46 @@
-💬 Chat App (MERN Stack)
-
+# 💬 Chat App (MERN Stack) 
 A real-time chat application built using the MERN stack, enabling users to communicate seamlessly with a modern UI and fast backend.
 
-🚀 Live Demo
+---
 
-🌐 Frontend: https://chat-app-omega-puce.vercel.app/
+## 🚀 Live Demo 
+- 🌐 Frontend: (https://chat-app-omega-puce.vercel.app/).
+- 🔗 Backend API: (https://chat-app-backend-ten-zeta.vercel.app/).
+- 📂 GitHub Repository: (https://github.com/YashasviSaroha/CHAT-APP).
 
-🔗 Backend API: https://chat-app-backend-ten-zeta.vercel.app/
+---
 
-📂 GitHub Repository
+## 🧰 Tech Stack 
 
-👉 https://github.com/YashasviSaroha/CHAT-APP
+**Frontend :-**
+- React.js (with Vite)
+- Tailwind CSS
+- Axios
+- React Router
 
-🧰 Tech Stack
-Frontend
+**Backend :-**
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- Deployment
 
-React.js (with Vite)
+  ***(Frontend: Vercel || Backend: Vercel || Database: MongoDB Atlas)***
 
-Tailwind CSS
+---
 
-Axios
+## ✨ Features 
+- 🔐 User Authentication (Login / Signup)
+- 💬 Real-time Messaging
+- 👥 User-to-User Chat
+- 📱 Responsive UI
+- ⚡ Fast API with Express
+- 🔒 Secure routes with JWT
 
-React Router
+---
 
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB (Mongoose)
-
-JWT Authentication
-
-Deployment
-
-Frontend: Vercel
-
-Backend: Vercel
-
-Database: MongoDB Atlas
-
-✨ Features
-
-🔐 User Authentication (Login / Signup)
-
-💬 Real-time Messaging
-
-👥 User-to-User Chat
-
-📱 Responsive UI
-
-⚡ Fast API with Express
-
-🔒 Secure routes with JWT
-
-📁 Project Structure
+## 📁 Project Structure
+```txt
 CHAT-APP/
 │
 ├── backend/
@@ -75,105 +60,91 @@ CHAT-APP/
 │   └── index.html
 │
 └── README.md
-⚙️ How It Works (Flow)
+```
 
-User signs up or logs in
+---
 
-Backend verifies credentials and generates JWT
+## ⚙️How It Works(Flow)
+- User signs up or logs in
+- Backend verifies credentials and generates JWT
+- Frontend stores token and sends it in requests
+- Users can send/receive messages via API
+- Messages are stored in MongoDB
 
-Frontend stores token and sends it in requests
+---
 
-Users can send/receive messages via API
-
-Messages are stored in MongoDB
-
-🛠️ Installation & Setup (Run Locally)
-1️⃣ Clone the Repository
+## 🛠️ Installation & Setup (Run Locally) 
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/YashasviSaroha/CHAT-APP.git
 cd CHAT-APP
-2️⃣ Setup Backend
+```
+### 2️⃣ Setup Backend
+```bash
 cd backend
 npm install
-
-Create a .env file:
-
+```
+### 3️⃣Create a .env file:
+```bash
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-
-Run backend:
-
+```
+### 4️⃣Run backend:
+```bash
 npm run dev
-3️⃣ Setup Frontend
+```
+### 5️⃣Setup Frontend
+```bash
 cd frontend
 npm install
-
-Create a .env file:
-
+```
+### 6️⃣Create a .env file:
+```bash
 VITE_API_BASE_URL=http://localhost:5000
-
-Run frontend:
-
+```
+### 7️⃣Run frontend:
+```bash
 npm run dev
-🌍 Deployment Guide
-Backend (Vercel)
+```
 
-Push backend code to GitHub
+---
 
-Import project in Vercel
+## 🌍 Deployment Guide
+### Backend (Vercel)
+- Push backend code to GitHub
+- Import project in Vercel
+- Set environment variables: MONGO_URI || JWT_SECRET
+- Deploy
 
-Set environment variables:
+### Frontend (Vercel)
+- Import frontend folder in Vercel
+- Add environment variable: VITE_API_BASE_URL= your_backend_url/
+- Deploy
 
-MONGO_URI
+---
 
-JWT_SECRET
+## 🔑 Environment Variables Summary
+- Variable	Description
+- MONGO_URI	MongoDB connection string
+- JWT_SECRET	Secret key for authentication
+- PORT	Backend port
+- VITE_API_BASE_URL	Backend API URL
 
-Deploy
+---
 
-Frontend (Vercel)
+## 🧪 Future Improvements
+- 🔔 Real-time notifications (Socket.io)
+- 🖼️ Image/file sharing
+- 👥 Group chats
+- 🌙 Dark mode
+- 📞 Voice/Video calling
 
-Import frontend folder in Vercel
+---
 
-Add environment variable:
+## 📞 Contact
+**Yashasvi Saroha**
 
-VITE_API_BASE_URL=https://chat-app-backend-ten-zeta.vercel.app/
-
-Deploy
-
-🔑 Environment Variables Summary
-Variable	Description
-MONGO_URI	MongoDB connection string
-JWT_SECRET	Secret key for authentication
-PORT	Backend port
-VITE_API_BASE_URL	Backend API URL
-🧪 Future Improvements
-
-🔔 Real-time notifications (Socket.io)
-
-🖼️ Image/file sharing
-
-👥 Group chats
-
-🌙 Dark mode
-
-📞 Voice/Video calling
-
-🤝 Contributing
-
-Contributions are welcome!
-
-Fork the repo
-
-Create a new branch
-
-Commit changes
-
-Push and create PR
-
-📞 Contact
-
-Developer: Yashasvi Saroha
-
-GitHub: https://github.com/YashasviSaroha
-
-Email: yashasvisaroha24@gmail.com
+📧 yashasvisaroha24@gmail.com  
+📞 8950463936  
+🔗 [GitHub Profile](https://github.com/YashasviSaroha)
