@@ -11,12 +11,14 @@ const ProfilePage = () => {
   const navigate = useNavigate()
   const [name, setName] = useState(authUser.fullName)
   const [bio, setBio] = useState(authUser.bio)
+  const [username, setUsername] = useState(authUser.username || "")
+  const [discoverable, setDiscoverable] = useState(authUser.discoverable !== false)
   
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!selectedImage) {
-      await updateProfile({ fullName: name, bio })
+      await updateProfile({ fullName: name, bio, username, discoverable })
       navigate('/')
       return
     }
@@ -25,7 +27,7 @@ const ProfilePage = () => {
     render.readAsDataURL(selectedImage)
     render.onload = async () => {
       const base64Image = render.result
-      await updateProfile({ profilePic: base64Image, fullName: name, bio })
+      await updateProfile({ profilePic: base64Image, fullName: name, bio, username, discoverable })
       navigate('/')
     }
 
@@ -43,7 +45,12 @@ const ProfilePage = () => {
             <img src={selectedImage ? URL.createObjectURL(selectedImage) : assets.avatar_icon} className={`w-12 h-12 ${selectedImage && 'rounded-full'}`} />
             Upload Profile Image
           </label>
-          <input onChange={(e) => setName(e.target.value)} value={name} type="text" required placeholder="Your Name" className="p-2 border border-grey-500 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+          <input onChange={(e) => setName(e.target.value)} value={name} type="text" required placeholder="Your Name" className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+          <input onChange={(e) => setUsername(e.target.value)} value={username} type="text" placeholder="Username" className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" />
+          <label className="flex items-center gap-2 text-sm">
+            <input type="checkbox" checked={discoverable} onChange={(e) => setDiscoverable(e.target.checked)} />
+            Allow people to find this username
+          </label>
           <textarea onChange={(e) => setBio(e.target.value)} value={bio} placeholder="Write Profile Bio" required className="p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-violet-500" rows={4}></textarea>
           <button type="submit" className="bg-gradient-to-r from-purple-400 to-violet-600 text-white p-2 rounded-full text-lg cursor-pointer" >Save</button>
         </form>

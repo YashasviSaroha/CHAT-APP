@@ -8,6 +8,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [bio, setBio] = useState("")
+  const [username, setUsername] = useState("")
   const [isDataSubmitted, setIsDataSubmitted] = useState(false)
 
   const {login} = useContext(AuthContext)
@@ -20,7 +21,7 @@ const LoginPage = () => {
       return;
     }
 
-    login(currentState=="Sign up" ? 'signup' : 'login',{fullName,email,password,bio})
+    login(currentState=="Sign up" ? 'signup' : 'login',{fullName,email,password,bio,username})
 
   }
   
@@ -47,6 +48,7 @@ const LoginPage = () => {
           <>
           <input onChange={(event) => setEmail(event.target.value)} value={email} type='email' placeholder='Email Address' required className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'/>
           <input onChange={(event) => setPassword(event.target.value)} value={password} type='password' placeholder='Password' required className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'/>
+          {currentState === "Sign up" && <input onChange={(event) => setUsername(event.target.value)} value={username} type='text' placeholder='Username (optional)' className='p-2 border border-gray-500 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500'/>}
           </>
         )}
 

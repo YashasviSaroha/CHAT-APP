@@ -1,9 +1,8 @@
-import jwt from "jsonwebtoken"
-
-// Function to generate token for user
+import crypto from "crypto";
+import jwt from "jsonwebtoken";
 
 export const generateToken = (userId) => {
-
-    const token = jwt.sign({ userId }, process.env.JWT_SECRET)
-    return token
-}
+  const jti = crypto.randomUUID();
+  const token = jwt.sign({ userId, jti }, process.env.JWT_SECRET, { expiresIn: "30d" });
+  return { token, jti };
+};
