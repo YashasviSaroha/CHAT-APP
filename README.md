@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 💬 Chat App (MERN Stack) 
 A real-time chat application built using the MERN stack, enabling users to communicate seamlessly with a modern UI and fast backend.
 
@@ -330,4 +329,3 @@ The automated tests cover retention, blocks, username rules, public user fields,
 - Report review is limited to addresses in `ADMIN_EMAILS`.
 - Summaries and transcripts do nothing useful until `GEMINI_API_KEY` and `GEMINI_MODEL` are set.
 - QR codes, sessions, and reports return a clear configuration error until MySQL is set.
->>>>>>> 6ade9d6 (Add privacy-first messaging and a QuickChat guide.)
